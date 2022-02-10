@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  min-height: 1000px;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+span {
+  color: #582946;
+}
+p {
+  font-weight: 300;
+  line-height: 1.5em;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  width: 100%;
+  padding: 5px 20px;
+  transition: 0.5s;
+}
+header .logo {
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
+}
+header.sticky {
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+header.sticky .logo {
+  color: #000;
+}
+.nav {
+  display: none;
+}
+.nav.active {
+  width: 100%;
+  height: calc(100% - 72px);
+  position: fixed;
+  top: 72px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+}
+.nav li {
+  margin-bottom: 10px;
+}
+.nav li a {
+  color: #111;
+  font-size: 1.5em;
+}
+.nav li a:hover {
+  border-bottom: 3px solid #582946;
+}
+.togglebtn {
+  position: relative;
+  background: url("img/menu.png");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-top: 23px;
+  transition: 0.5s;
+}
+header.sticky .togglebtn {
+  filter: invert(1);
+}
+.togglebtn.active {
+  background: url("img/close.png");
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+.home {
+  background: url("img/five.jpeg");
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .content {
+  text-align: center;
+  max-width: 900px;
+  margin: 20px;
+}
+.home .content h2 {
+  color: #fff;
+  font-size: 3em;
+}
+.home .content p {
+  color: #fff;
+  font-size: 1em;
+}
+.btn {
+  font-size: 1em;
+  color: #fff;
+  background: #582946;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  border-radius: 50px;
+}
+.btn:hover {
+  letter-spacing: 6px;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 40px 0;
+}
+.row .col50 {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  height: 100%;
+}
+.row .col50 .titleText {
+  padding-bottom: 20px;
+}
+.row .col50 p {
+  height: auto;
+}
+.titleText {
+  font-size: 1.8em;
+  font-weight: 300;
+  padding-bottom: 5px;
+  margin-top: 60px;
+}
+.titleText span {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.row .col50 .imgBx {
+  height: 500px;
+  position: relative;
+}
+.row .col50 .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.products {
+  margin: 40px 0;
+}
+.products .content {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.products .content .box {
+  width: 340px;
+  border: 15px solid #fff;
+  border-radius: 4px;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.08);
+  /* padding: 10px; */
+  margin: 20px;
+}
+.products .content .box .imgBx {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+.products .content .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.products .title {
+  text-align: center;
+}
+.products .content .box .text {
+  padding-top: 10px;
+}
+.products .content .box .text h3 {
+  font-weight: 300;
+  color: #111;
+}
+#i,
+#ii,
+#iii,
+#iv,
+#v,
+#vi {
+  display: none;
+}
+#btnn {
+  display: none;
+}
+.quotes .content {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.quotes .content .box {
+  width: 340px;
+  border: 15px solid #fff;
+  border-radius: 4px;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.08);
+  /* padding: 10px; */
+  margin: 20px;
+  background: #fff;
+}
+.quotes .content .box .imgBx {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quotes .content .box .imgBx p {
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+}
+.quotes .title {
+  text-align: center;
+}
+.quotes .content .box .text {
+  padding-top: 10px;
+}
+.quotes .content .box .text h3 {
+  font-weight: 700;
+  color: #582946;
+  text-align: center;
+  font-size: 1em;
+}
+.quotes .content .box .imgBx.one {
+  background: url("img/back.jpeg");
+  background-size: cover;
+}
+.quotes .content .box .imgBx.two {
+  background: url("img/three.jpeg");
+  background-size: cover;
+}
+.quotes .content .box .imgBx.three {
+  background: url("img/teach.jpeg");
+  background-size: cover;
+}
+.quotes .content .box .imgBx.four {
+  background: url("img/banner1.jpg");
+  background-size: cover;
+}
+.contact {
+  margin-top: 40px;
+  background: url("img/contact.jpeg");
+  background-size: cover;
+}
+.contact .title {
+  padding-top: 30px;
+  text-align: center;
+}
+.contact .titleText {
+  margin-top: 20px;
+}
+.contactForm {
+  padding: 25px 40px;
+  background: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 50px 20px 0 20px;
+  border-radius: 4px;
+}
+.contactForm h3 {
+  color: #111;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.contactForm .inputBox {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+  color: #111;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #555;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 300;
+  resize: none;
+}
+.contactForm .inputBox input[type="submit"] {
+  font-size: 0.8em;
+  color: #fff;
+  background: #582946;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  max-width: 100px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+.copyrightText {
+  padding: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.copyrightText p {
+  color: #333;
+}
+@media screen and (min-width: 990px) {
+  header {
+    padding: 30px 50px;
+  }
+  header.sticky {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .togglebtn {
+    display: none;
+  }
+  .togglebtn.active {
+    display: none;
+  }
+  .nav,
+  .nav.active,
+  header.sticky .nav.active {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    margin-top: 15px;
+    background: none;
+    position: relative;
+    top: 0;
+    height: auto;
+    width: auto;
+  }
+  .nav li a {
+    margin-right: 30px;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+  }
+  header.sticky .nav li a {
+    color: #111;
+  }
+  section {
+    padding: 100px;
+  }
+  .row {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .row .col50 {
+    width: 48%;
+    height: 450px;
+    margin-bottom: 0;
+  }
+  .row .col50 .imgBx {
+    width: 100%;
+    height: 100%;
+  }
+  .row .col50 .titleText {
+    margin-top: 0;
+    font-size: 2em;
+  }
+  .home .content h2 {
+    font-size: 5em;
+  }
+  .home .content p {
+    font-size: 1em;
+    font-weight: 300;
+  }
+  .btn {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .products .titleText {
+    font-size: 2.5em;
+  }
+  .products .title p {
+    font-size: 1em;
+  }
+  .quotes .titleText {
+    font-size: 2.5em;
+  }
+  .quotes .title p {
+    font-size: 1em;
+  }
+  .contact .titleText {
+    font-size: 2.5em;
+  }
+  .contact .title p {
+    font-size: 1em;
+  }
+  .contactForm {
+    padding: 75px 50px;
+  }
+  .contactForm h3 {
+    font-weight: 500;
+    font-size: 1.2em;
+  }
+  .contactForm .inputBox input[type="submit"] {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 480px) {
+  header .logo {
+    font-size: 1.5em;
+  }
+  .home .content h2 {
+    font-size: 2.2em;
+  }
+}
